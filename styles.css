@@ -41,12 +41,16 @@ h3 {
 }
 
 .top-text {
+  margin: 0;
+  padding-top: 2px;
   font-size: 0.625rem;
   font-weight: 900;
   color: #f18119;
   text-transform: uppercase;
   order: -1;
   letter-spacing: 2px;
+  border-top: 5px solid #F18119;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
 }
 
 .small-text {
@@ -61,6 +65,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   height: 50vh;
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   background-color: #404040;
@@ -74,31 +79,55 @@ main {
   padding: 2em 1em;
 }
 
-.intro > *, main > * {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
+.intro > *,
+main > * {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Form */
+
 form {
+  width: 80%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+form input,
+form .btn {
   width: 100%;
+  border-radius: 5px;
 }
 
 form input {
-  margin: 0.5em;
-  width: 60%;
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: 0.75em;
+  padding: 0.25em;
+  border: 1px solid #404040;
 }
 
 form .btn {
+  display: inline-block;
+  padding: 1em 1.5em;
   border: none;
   border-radius: 4px;
-  background-color: #f18119;
+  background-image: linear-gradient(to right, #ffa51d, #ff713b);
   color: #fff;
-  padding: 0.5em 1.5em;
-  width: 60%;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 250ms;
+  cursor: pointer;
+}
+
+form .btn:hover,
+form .btn:focus {
+  transform: scale(1.1);
 }
 
 /* Media queries */
@@ -119,9 +148,9 @@ form .btn {
   }
 
   main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   h1 {
