@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>BBQ Splash Page</title>
   </head>
@@ -15,7 +18,7 @@
         <p>Join us for this live webinar</p>
         <p class="top-text">Mouthwateringly delicious</p>
       </div>
-      <main>
+      <main id="main-content">
         <h2>Become a BBQ master!</h2>
         <h3>Register today</h3>
         <p class="description">
@@ -24,13 +27,17 @@
           is to learn from the best. You can do just that by signing up for this
           free webinar!
         </p>
-        <form action="#" method="POST">
-          <input type="name" placeholder="first name"/>
-          <input type="email" placeholder="email"/>
-          <button class="btn">Register</button>
-          <p class="small-text">We'll never share your information <br> without your permission</p>
+        <form id="email-collector" action="#" method="POST">
+          <input name="firstName" type="name" placeholder="first name" />
+          <input name="emailAddress" type="email" placeholder="email" />
+          <button class="btn" type="submit">Register</button>
+          <p class="small-text">
+            We'll never share your information <br />
+            without your permission
+          </p>
         </form>
       </main>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
